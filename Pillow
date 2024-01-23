@@ -1,0 +1,13 @@
+
+from PIL import Image
+desired_colour = (255, 0, 0)
+im = Image.open("bugatti.jpg")
+w, h = im.size
+pix = im.load()
+found = False
+for i in range(w):
+    for j in range(h):
+        if pix[i, j] == desired_colour:
+            # Bingo! Found it!
+            found = True
+            break
